@@ -19,7 +19,7 @@ rpm -ql zabbix-server-mysql | grep sql
 zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -pliyang zabbix
 mysql -uroot zabbix -e 'show tables'
 ```
-## setup zabbix connect database
+## setup zabbix server connect database
 ```
 vi /etc/zabbix/zabbix_server.conf 
 DBHost=localhost
@@ -27,10 +27,12 @@ DBName=zabbix
 DBUser=zabbix
 DBPassword=liyang
 ```
-## modify timezone
+## modify LAMP timezone
 ```
 vi /etc/httpd/conf.d/zabbix.conf
 php_value date.timezone Asia/Shanghai
 systemctl start httpd
 systemctl enable httpd
+
+http:ip/zabbix
 ```
