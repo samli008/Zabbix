@@ -38,3 +38,11 @@ systemctl enable httpd
 
 http:ip/zabbix with default user:Admin passwd:zabbix
 ```
+## zabbix linux agent
+```
+rpm -ivh zabbix-agent-4.0.28-1.el7.x86_64.rpm 
+vi /etc/zabbix/zabbix_agentd.conf 
+Server=zabbix_server_ip
+systemctl enable zabbix-agent
+systemctl start zabbix-agent
+```
