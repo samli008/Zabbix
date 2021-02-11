@@ -34,5 +34,5 @@ php_value date.timezone Asia/Shanghai
 systemctl start httpd
 systemctl enable httpd
 
-http:ip/zabbix
+http:ip/zabbix with default user:Admin passwd:zabbix
 ```
