@@ -45,4 +45,8 @@ vi /etc/zabbix/zabbix_agentd.conf
 Server=zabbix_server_ip
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
+
+UserParameter=liyang,df -hT | awk '/kvm/{print $6}' | sed 's@\%@@g'
+systemctl restart zabbix-agent
+zabbix_get -s 192.168.6.61 -k liyang #on zabbix server
 ```
