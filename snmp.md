@@ -10,6 +10,8 @@ view    systemview    included   .1.3.6.1.2.1.25.1.1
 
 systemctl enable snmpd
 systemctl start snmpd
+
+ss -nlpu |grep 161
 ```
 ## config snmp client on zabbix server
 ```
