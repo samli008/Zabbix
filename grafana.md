@@ -6,3 +6,11 @@ systemctl start grafana-server
 ss -nlpt |grep 3000
 http://ip:3000  default:admin/admin
 ```
+## install grafana plugin for zabbix
+```
+grafana-cli plugins list-remote |grep zabbix
+grafana-cli plugins install alexanderzobnin-zabbix-app
+cd /var/lib/grafana/plugins
+tar xzvf alexanderzobnin-zabbix-app.tar
+systemctl restart grafana-server
+```
