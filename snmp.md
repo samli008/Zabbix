@@ -33,4 +33,10 @@ snmpwalk -v 2c -c public 192.168.6.10 .1.3.6.1.4.1.674.10892.5.1.3.6
 snmpwalk -v 2c -c public 192.168.6.10 .1.3.6.1.4.1.674.10892.5.2.4
 # power uptime
 snmpwalk -v 2c -c public 192.168.6.11  .1.3.6.1.4.1.674.10892.5.2.5
+# pd state 2(ready) 3(online) 4(foreign) 5(offline) 6(blocked) 7(failed) 8(non-raid) 9(removed) 
+snmpwalk -v 2c -c public 192.168.6.11  .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.4
+# vd state 2 online 3 failed 4 degraded
+snmpwalk -v 2c -c public 192.168.6.11  .1.3.6.1.4.1.674.10892.5.5.1.20.140.1.1.4
+# vd name
+snmpwalk -v 2c -c public 192.168.6.11  .1.3.6.1.4.1.674.10892.5.5.1.20.140.1.1.2
 ```
