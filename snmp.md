@@ -25,4 +25,6 @@ snmpwalk -v 2c -c liyang 192.168.8.104 .1.3.6.1.2.1.25.2.2.0
 
 # DELL idrac type with oid(idrac setup-->network-->service-->SNMP agent)
 snmpwalk -v 2c -c public 192.168.6.11 .1.3.6.1.4.1.674.10892.2.1.1.2.0
+# service TAG
+snmpwalk -v 2c -c public 192.168.6.11 .1.3.6.1.4.1.674.10892.5.1.3.2
 ```
