@@ -29,4 +29,6 @@ snmpwalk -v 2c -c public 192.168.6.11 .1.3.6.1.4.1.674.10892.2.1.1.2.0
 snmpwalk -v 2c -c public 192.168.6.11 .1.3.6.1.4.1.674.10892.5.1.3.2
 # OS type
 snmpwalk -v 2c -c public 192.168.6.10 .1.3.6.1.4.1.674.10892.5.1.3.6
+# power status 3 off 4 on
+snmpwalk -v 2c -c public 192.168.6.10 .1.3.6.1.4.1.674.10892.5.2.4
 ```
