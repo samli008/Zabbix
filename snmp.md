@@ -47,3 +47,7 @@ snmpwalk -v 2c -c public 192.168.6.11  .1.3.6.1.4.1.674.10892.5.5.1.20.140.1.1.2
 # zabbix with snmpget oid + .0
 snmpget -v 2c -c public 192.168.6.11 1.3.6.1.4.1.674.10892.5.2.4.0
 ```
+## snmp oid for zabbix auto-discovery
+```
+snmpget -v 2c -c public 192.168.6.11 1.3.6.1.2.1.1.5.0
+```
