@@ -3,7 +3,7 @@
 yum -y install zabbix-server-mysql zabbix-agent centos-release-scl zabbix-get
 yum -y install zabbix-web-mysql-scl zabbix-apache-conf-scl mariadb-server
 systemctl enable --now mariadb
-mql_secure_installation
+mysql_secure_installation
 create database zabbix character set utf8 collate utf8_bin;
 grant all privileges on zabbix.* to zabbix@localhost identified by 'liyang';
 ```
