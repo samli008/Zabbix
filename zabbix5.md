@@ -13,3 +13,8 @@ rpm -ql zabbix-server-mysql | grep sql
 zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -pliyang zabbix
 mysql -uroot zabbix -e 'show tables'
 ```
+## setup zabbix server connect mysql
+```
+vi /etc/zabbix/zabbix_server.conf
+DBPassword=liyang
+```
