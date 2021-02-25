@@ -18,3 +18,14 @@ mysql -uroot -pliyang zabbix -e 'show tables'
 vi /etc/zabbix/zabbix_server.conf
 DBPassword=liyang
 ```
+## setup zabbix php
+```
+vi /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+php_value[date.timezone] = Asia/Shanghai
+```
+## start zabbix service
+```
+systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
+systemctl start zabbix-server zabbix-agent httpd rh-php72-php-fpm
+```
+## access IP/zabbix default user/passwd: Admin/zabbix
